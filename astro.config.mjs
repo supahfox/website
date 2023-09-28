@@ -1,13 +1,17 @@
-import { defineConfig } from 'astro/config'
+import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import svelte from "@astrojs/svelte";
 import mdx from "@astrojs/mdx";
 
+import cloudflare from "@astrojs/cloudflare";
+
+// https://astro.build/config
 export default defineConfig({
-    site: 'https://supahfox.live',
-    base: '/website',
+    site: "https://supahfox.live",
+    base: "/",
     integrations: [sitemap(), svelte(), mdx()],
-    output: "server",
+    /*output: "server",
+    adapter: cloudflare(),*/
     vite: {
         build: {
             sourcemap: true
