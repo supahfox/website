@@ -13,12 +13,12 @@ export default defineConfig({
     /*
     output: "server",
     adapter: cloudflare(),
+    */
     vite: {
         build: {
             sourcemap: true
         }
     },
-    */
     markdown: {
         syntaxHighlight: "prism"
     },
