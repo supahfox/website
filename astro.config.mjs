@@ -10,7 +10,6 @@ export default defineConfig({
     site: "https://supahfox.live",
     integrations: [sitemap(), svelte(), mdx()],
     output: "server",
-    adapter: cloudflare(),
     vite: {
         build: {
             sourcemap: true
@@ -19,4 +18,5 @@ export default defineConfig({
     markdown: {
         syntaxHighlight: "prism"
     },
+    adapter: cloudflare(),
 });
