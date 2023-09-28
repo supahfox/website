@@ -1,4 +1,17 @@
-name: Github token
-on: [push]
-env:
-  GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+name: Github Token
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ejemplo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ENV
+        uses: actions/hello-world@v1
+        with:
+          env: ${{ secrets.GITHUB_TOKEN }}
+
