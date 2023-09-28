@@ -9,7 +9,8 @@ import cloudflare from "@astrojs/cloudflare";
 export default defineConfig({
     site: "https://supahfox.live",
     base: "/",
-    integrations: [sitemap(), svelte(), mdx()]/*,
+    integrations: [sitemap(), svelte(), mdx()],
+    /*
     output: "server",
     adapter: cloudflare(),
     vite: {
@@ -17,8 +18,8 @@ export default defineConfig({
             sourcemap: true
         }
     },
+    */
     markdown: {
         syntaxHighlight: "prism"
     },
-    */
 });
