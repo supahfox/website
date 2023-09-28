@@ -4,7 +4,7 @@ import svelte from "@astrojs/svelte";
 import mdx from "@astrojs/mdx";
 
 export default defineConfig({
-    site: 'https://astronaut.github.io',
+    site: 'https://supahfox.live',
     base: '/website',
     integrations: [sitemap(), svelte(), mdx()],
     output: "server",
