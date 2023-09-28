@@ -18,5 +18,5 @@ export default defineConfig({
     markdown: {
         syntaxHighlight: "prism"
     },
-    adapter: cloudflare(),
+    adapter: cloudflare()
 });
