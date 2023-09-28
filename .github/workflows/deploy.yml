@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: ENV
-        uses: actions/hello-world@v1
+      - name: Astro Deploy
+        uses: withastro/action@v0.3.2
         with:
           env: ${{ secrets.GITHUB_TOKEN }}
 
