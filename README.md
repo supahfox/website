@@ -1,11 +1,8 @@
 # THIS IS A FORK FROM [HERE](https://codeberg.org/Ven/vendicated.dev)
 
-# vendicated.dev
+# supahfox.live
 
-This is the source code for my personal website!
-
-If you are looking at this repo on github, note that it's just a mirror.
-The actual repository is [on codeberg](https://codeberg.org/Ven/vendicated.dev) and pull requests and issues should go there!
+Webpage src.
 
 # Welcome to [Astro](https://astro.build)
 
