@@ -12,7 +12,7 @@ export default defineConfig({
     output: "server",
     vite: {
         build: {
-            sourcemap: false
+            sourcemap: true
         }
     },
     markdown: {
