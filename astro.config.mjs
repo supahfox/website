@@ -7,7 +7,7 @@ import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
-    site: "https://supahfox.github.io",
+    site: "https://supahfox.live",
     integrations: [sitemap(), svelte(), mdx()],
     output: "server",
     vite: {
