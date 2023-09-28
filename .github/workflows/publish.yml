@@ -19,7 +19,7 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: 6bf5e781cad4193cac5ec1f19f1d5188
           projectName: supahfox
-          directory: /
+          directory: supahfox.live/
           # Optional: Enable this if you want to have GitHub Deployments triggered
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           # Optional: Switch what branch you are publishing to.
