@@ -1,4 +1,4 @@
-name: Github Token
+name: Astro / Cloudflare Pages
 
 on:
   push:
@@ -6,12 +6,21 @@ on:
       - main
 
 jobs:
-  ejemplo:
+  construir:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Astro Deploy
-        uses: withastro/action@v0.3.2
-        with:
-          env: ${{ secrets.GITHUB_TOKEN }}
+      - name: Configurar la variable de entorno GITHUB_TOKEN
+        run: echo "GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}" >> $GITHUB_ENV
 
+      - name: Construir el sitio web con Astro
+        uses: astrojs/action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Implementar el sitio web en Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          account_id: ${{ secrets.CF_ACCOUNT_ID }}
+          api_token: ${{ secrets.CF_API_TOKEN }}
+          site_id: ${{ secrets.CF_SITE_ID }}
