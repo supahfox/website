@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import svelte from "@astrojs/svelte";
 import mdx from "@astrojs/mdx";
-
 import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
