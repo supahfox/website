@@ -1,6 +1,6 @@
 # THIS IS A FORK FROM [HERE](https://codeberg.org/Ven/vendicated.dev)
 
-# supahfox.live
+# Website
 
 Webpage src.
 
