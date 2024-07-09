@@ -1,4 +1,4 @@
-# THIS IS A FORK FROM [HERE](https://codeberg.org/Ven/vendicated.dev)
+# THIS IS A FORK FROM [HERE](https://codeberg.org/vee/vendicated.dev)
 
 # Website
 
