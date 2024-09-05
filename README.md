@@ -1,8 +1,9 @@
-# THIS IS A FORK FROM [HERE](https://codeberg.org/vee/vendicated.dev)
+# vendicated.dev
 
-# Website
+This is the source code for my personal website!
 
-Webpage src.
+If you are looking at this repo on github, note that it's just a mirror.
+The actual repository is [on codeberg](https://codeberg.org/Vee/vendicated.dev) and pull requests and issues should go there!
 
 # Welcome to [Astro](https://astro.build)
 
