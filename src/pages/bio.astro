@@ -1,6 +1,4 @@
 ---
-import { Response } from "astro/runtime/server";
-
 const bio = `Hola como estás
 
 Mi mami y BFF: Nonnah <3
@@ -21,13 +19,5 @@ PC SPECS:
 |   [Power Supply][Thermaltake Smart 700 W 80+ Certified ATX Power Supply]
 |   [Operating System][Microsoft Windows 11 Pro Retail 64-bit]
 `;
-
-export async function GET() {
-  return new Response(bio, {
-    headers: {
-      "Content-Type": "text/plain; charset=utf-8",
-    },
-  });
-}
 ---
-
+<pre>{bio}</pre>
