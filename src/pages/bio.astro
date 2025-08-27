@@ -1,0 +1,33 @@
+---
+import { Response } from "astro/runtime/server";
+
+const bio = `Hola como estás
+
+Mi mami y BFF: Nonnah <3
+
+PC SPECS:
+|   [CPU][AMD Ryzen 7 3800X 3.9 GHz 8-Core Processor]
+|   [Cooling][Cooler Master MasterLiquid ML240L V2 RGB]
+|   [Case][Cooler Master MB320L ARGB]
+|   [Motherboard][Asus PRIME B450M-A Micro ATX AM4 Motherboard]
+|   [Memory][Kingston HyperX Fury 8 GB (1 x 8 GB) DDR4-3200 CL18 Memory]
+|   [Memory][Kingston HyperX Fury 8 GB (1 x 8 GB) DDR4-3200 CL18 Memory]
+|   [Memory][Kingston HyperX Fury 8 GB (1 x 8 GB) DDR4-3200 CL18 Memory]
+|   [Storage][Samsung 980PRO 500GB NVMe Solid State Drive]
+|   [Storage][Western Digital WD Green WDS100T3G0A 1TB 2.5" Solid State Drive]
+|   [Storage][TOSHIBA MQ04ABF100 1 TB 2.5" 5400 RPM Internal Hard Drive]
+|   [Storage][Western Digital My Passport 4 TB 2.5" 4800 RPM External Hard Drive]
+|   [Video Card][ZOTAC GAMING GeForce RTX 3060 Twin Edge 12GB OC Video Card]
+|   [Power Supply][Thermaltake Smart 700 W 80+ Certified ATX Power Supply]
+|   [Operating System][Microsoft Windows 11 Pro Retail 64-bit]
+`;
+
+export async function GET() {
+  return new Response(bio, {
+    headers: {
+      "Content-Type": "text/plain; charset=utf-8",
+    },
+  });
+}
+---
+
