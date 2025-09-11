@@ -1,24 +1,34 @@
 ---
-const bio = `Hola como estás
+import BlogPostCard from "../../components/BlogPostCard.astro";
+import CenteredBody from "../../components/CenteredBody.astro";
+import Layout from "../../layouts/Layout.astro";
 
-Mi mami y BFF: Nonnah <3
+import type { BlogPost } from "../../scripts-ssr/types";
 
-PC SPECS:
-|   [CPU][AMD Ryzen 7 3800X 3.9 GHz 8-Core Processor]
-|   [Cooling][Cooler Master MasterLiquid ML240L V2 RGB]
-|   [Case][Cooler Master MB320L ARGB]
-|   [Motherboard][Asus PRIME B450M-A Micro ATX AM4 Motherboard]
-|   [Memory][Kingston HyperX Fury 8 GB (1 x 8 GB) DDR4-3200 CL18 Memory]
-|   [Memory][Kingston HyperX Fury 8 GB (1 x 8 GB) DDR4-3200 CL18 Memory]
-|   [Memory][Kingston HyperX Fury 8 GB (1 x 8 GB) DDR4-3200 CL18 Memory]
-|   [Storage][Samsung 980PRO 500GB NVMe Solid State Drive]
-|   [Storage][Western Digital WD Green WDS100T3G0A 1TB 2.5" Solid State Drive]
-|   [Storage][TOSHIBA MQ04ABF100 1 TB 2.5" 5400 RPM Internal Hard Drive]
-|   [Storage][Western Digital My Passport 4 TB 2.5" 4800 RPM External Hard Drive]
-|   [Video Card][ZOTAC GAMING GeForce RTX 3060 Twin Edge 12GB OC Video Card]
-|   [Power Supply][Thermaltake Smart 700 W 80+ Certified ATX Power Supply]
-|   [Operating System][Microsoft Windows 11 Pro Retail 64-bit]
-`;
+const posts = [] ?? (await Astro.glob<BlogPost>("./*.{md,mdx}"));
 ---
-<meta charset="UTF-8">
-<pre>{bio}</pre>
+
+<Layout title="Hola como estás" description="z">
+    <CenteredBody>
+        <h1>Mi mami y BFF: Nonnah <3</h1>
+        <p>PC SPECS:</p>
+        <p>|   [CPU][AMD Ryzen 7 3800X 3.9 GHz 8-Core Processor]</p>
+        <p>|   [Cooling][Cooler Master MasterLiquid ML240L V2 RGB]</p>
+        <p>|   [Case][Cooler Master MB320L ARGB]</p>
+        <p>|   [Motherboard][Asus PRIME B450M-A Micro ATX AM4 Motherboard]</p>
+        <p>|   [Memory][Kingston HyperX Fury 8 GB (1 x 8 GB) DDR4-3200 CL18 Memory]</p>
+        <p>|   [Memory][Kingston HyperX Fury 8 GB (1 x 8 GB) DDR4-3200 CL18 Memory]</p>
+        <p>|   [Memory][Kingston HyperX Fury 8 GB (1 x 8 GB) DDR4-3200 CL18 Memory]</p>
+        <p>|   [Storage][Samsung 980PRO 500GB NVMe Solid State Drive]</p>
+        <p>|   [Storage][Western Digital WD Green WDS100T3G0A 1TB 2.5" Solid State Drive]</p>
+        <p>|   [Storage][TOSHIBA MQ04ABF100 1 TB 2.5" 5400 RPM Internal Hard Drive]</p>
+        <p>|   [Storage][Western Digital My Passport 4 TB 2.5" 4800 RPM External Hard Drive]</p>
+        <p>|   [Video Card][ZOTAC GAMING GeForce RTX 3060 Twin Edge 12GB OC Video Card]</p>
+        <p>|   [Power Supply][Thermaltake Smart 700 W 80+ Certified ATX Power Supply]</p>
+        <p>|   [Operating System][Microsoft Windows 11 Pro Retail 64-bit]</p>
+        <div>
+            {posts.map(p => <BlogPostCard post={p} />)}
+        </div>
+    </CenteredBody>
+</Layout>
+--
