@@ -1,9 +1,9 @@
 ---
-import BlogPostCard from "../../components/BlogPostCard.astro";
-import CenteredBody from "../../components/CenteredBody.astro";
-import Layout from "../../layouts/Layout.astro";
+import BlogPostCard from "../components/BlogPostCard.astro";
+import CenteredBody from "../components/CenteredBody.astro";
+import Layout from "../layouts/Layout.astro";
 
-import type { BlogPost } from "../../scripts-ssr/types";
+import type { BlogPost } from "../scripts-ssr/types";
 
 const posts = [] ?? (await Astro.glob<BlogPost>("./*.{md,mdx}"));
 ---
