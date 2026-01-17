@@ -17,7 +17,8 @@
         "accept-language-parser": "^1.5.0",
         "astro": "^5.16.11",
         "normalize.css": "^8.0.1",
-        "svelte": "^5.46.4"
+        "svelte": "^5.46.4",
+        "undici": "^7.18.2"
     },
     "devDependencies": {
         "@astrojs/sitemap": "^3.7.0",
